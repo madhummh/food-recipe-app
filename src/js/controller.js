@@ -106,6 +106,11 @@ const controlBookmarks = function () {
   bookmarksView.render(model.state.bookmarks)
 }
 
+const newFeature = function () {
+  console.log("welcome to the application");
+}
+
+
 const controlAddRecipe = async function (newRecipe) {
   try {
     //Show loading spinner
@@ -147,7 +152,8 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
-  console.log('welcome');
+  newFeature();
+
   // controlServings();
 }
 init();
@@ -164,7 +170,7 @@ init();
 // events.forEach(attachEventListeners);
 
 // ['hashchange', 'load'].forEach(ev => window.addEventListener(ev, controlRecipes))
-//if incase we have ten times addEventListner below is not good way to do 
+//if incase we have ten times addEventListner below is not good way to do
 // window.addEventListener('hashchange', controlRecipes)
 // window.addEventListener('load', controlRecipes)
 
