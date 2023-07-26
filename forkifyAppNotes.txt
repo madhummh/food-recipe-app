@@ -1,0 +1,47 @@
+four importanat things in MVC 
+buisness logic
+state
+HTTP library
+Application Logic
+presentation Logic
+
+default export we can give any name of our choice when we are importing from the model
+npm init
+specify the script object under that the properties are start with parcel index.html
+and aslo define property build with the parcel build index.html
+for paticular version to install we need to run a command npm i parcel@2
+if we are using parcel v2 ,need to replace defer with type="module"
+json method is available for all the response object 
+handle the error by craeting the if block for the ok property in reality its an false value ,if we mention with !res.ok means inverse of false is true m,then the throw block throw new Error will create error object will handle in the catch block,
+now all coming from the dist folder ,need to import icons  .. means the parent folder ,we need to tell javascript icons no longer in normal folder need to write on the top of the code '../img/icons.svg'; this in parcel 1
+in parcel v2 ,any static assest that are not programming file ,import icons from 'url:../img/icons.svg'; now icons variable conatins all adn refer image now,
+to install polyfill npm i core-js;
+to install multiple pacakges at the same time npm i core-js regenerator -runtime
+pollyfill we install to work our code with old browser also  write code at the top ,
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
+
+window.location is basically the entire url 
+to remove hash , window.location.hash.slice(1)
+
+model.state.recipe is containing the recipe object that contains all the details of the recipe coming from the API,
+
+recipeView.render(model.state.recipe);  recipeView is the exported from recipeView.js 
+
+this recipeView  only exoprted in form of new RecipeView();, imported like this import recipeView from './views/recipeView.js'; in the controller.js now we can develope the render function in recipeView.js infact its view ,related to view we need to develope in recipeView.js thats the part of view
+
+(
+TRY TO UNDERSTAND THIS ONE ITS EXTRA 
+
+const timeout = function (s) {
+  return new Promise(function (_, reject) {
+    setTimeout(function () {
+      reject(new Error(`Request took too long! Timeout after ${s} second`));
+    }, s * 1000);
+  });
+};
+
+)
+
+
+
